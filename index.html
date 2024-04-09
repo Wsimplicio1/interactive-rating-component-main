@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive-rating</title>
+  <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main>
+
+    <div class="container">
+      <figure class="figure-star">
+        <img class="star" src="/images/icon-star.svg" alt="start">
+      </figure>
+
+      <div class="title">
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know we did with your support
+          request. All feedback is appreciated to help us improve our offering!
+        </p>
+      </div>
+
+      <div class="box-rating">
+        
+        <input type="radio" id="number1" name="rating" value="1">
+        <div class="rating">
+          <label for="number1">1</label>
+        </div>
+        
+        <input type="radio" id="number2" name="rating" value="2">
+        <div class="rating">
+          <label for="number2">2</label>
+        </div>
+
+        <input type="radio" id="number3" name="rating" value="3">
+        <div class="rating">
+          <label for="number3">3</label>
+        </div>
+
+        <input type="radio" id="number4" name="rating" value="4">
+        <div class="rating">
+          <label for="number4">4</label>
+        </div>
+
+        <input type="radio" id="number5" name="rating" value="5">
+        <div class="rating"> 
+          <label for="number5">5</label>
+        </div>
+      </div>
+
+      <button class="submit-button" type="submit">SUBMIT</button>
+    </div>
+
+    <div class="container-two">
+      <figure class="img-thank-you">
+        <img src="/images/illustration-thank-you.svg" alt="illustration-thank-you">
+      </figure>
+
+      <div class="value-feedback">
+        <h4>You select <span class="value"></span> out of 5</h4>
+      </div>
+
+      <div class="title-2">
+        <h1>Thank You!</h1>
+        <p>
+          We appreciate you taking the time to give a rating.
+          If you ever need more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
