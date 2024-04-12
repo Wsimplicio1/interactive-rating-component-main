@@ -1,22 +1,26 @@
-const rating = document.querySelectorAll('input');
-const button = document.querySelector('.submit-button');
-const containerRating = document.querySelector('.container');
-const containerMessage = document.querySelector('.container-two');
-let valueRating = document.querySelector('.value')
-let value;
+let inputValue = document.querySelectorAll('input');
+let button = document.querySelector('.submit-button');
+let value = document.querySelector('.value');
+let containerFeedback = document.querySelector('.container-feedback');
+let containerResponse = document.querySelector('.container-response');
 
-console.log(containerMessage)
+let buttonValue;
 
-rating.forEach((ratingValue) => {
-    ratingValue.addEventListener('click', function() {
-        value = ratingValue.value;
-    });
-});
+inputValue.forEach((value) => value.addEventListener('click', () => {
+    buttonValue = value.value
+}));
 
 button.addEventListener('click', () => {
-    containerRating.style.display = "none";
-    valueRating.innerHTML = value;
-    containerMessage.style.display = "flex";
+    if(buttonValue != undefined){
+        value.innerHTML = buttonValue;
+        containerFeedback.classList.add('hidden');
+        containerResponse.classList.remove('hidden');
+    } else {
+        alert('Por gentileza, escolha uma nota para continuar!')
+    };
 });
+
+
+
 
 
